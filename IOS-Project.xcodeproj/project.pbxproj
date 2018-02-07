@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2FA9C3D0202A021F0094F587 /* pln.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9C3CF202A021F0094F587 /* pln.swift */; };
+		2FA9C3D3202A0C050094F587 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FA9C3D1202A0C050094F587 /* grid.png */; };
+		2FA9C3D5202A0C240094F587 /* focus_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FA9C3D4202A0C240094F587 /* focus_square.png */; };
+		2FA9C3D7202A0C3A0094F587 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FA9C3D6202A0C3A0094F587 /* add.png */; };
 		2FCFDD8C2020701600BF8FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCFDD8B2020701600BF8FC8 /* AppDelegate.swift */; };
 		2FCFDD8E2020701600BF8FC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCFDD8D2020701600BF8FC8 /* ViewController.swift */; };
 		2FCFDD912020701600BF8FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCFDD8F2020701600BF8FC8 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		2FA9C3CF202A021F0094F587 /* pln.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pln.swift; sourceTree = "<group>"; };
+		2FA9C3D2202A0C050094F587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/grid.png; sourceTree = "<group>"; };
+		2FA9C3D4202A0C240094F587 /* focus_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = focus_square.png; path = "../../measure-using-ARKit-iOS11-master/measure-tape-demo/focus_square.png"; sourceTree = "<group>"; };
+		2FA9C3D6202A0C3A0094F587 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		2FCFDD882020701600BF8FC8 /* IOS-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCFDD8B2020701600BF8FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FCFDD8D2020701600BF8FC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,11 +107,14 @@
 			children = (
 				2FCFDD8B2020701600BF8FC8 /* AppDelegate.swift */,
 				2FCFDD8D2020701600BF8FC8 /* ViewController.swift */,
+				2FA9C3CF202A021F0094F587 /* pln.swift */,
 				2FCFDD8F2020701600BF8FC8 /* Main.storyboard */,
+				2FA9C3D4202A0C240094F587 /* focus_square.png */,
+				2FA9C3D1202A0C050094F587 /* grid.png */,
+				2FA9C3D6202A0C3A0094F587 /* add.png */,
 				2FCFDD922020701600BF8FC8 /* Assets.xcassets */,
 				2FCFDD942020701600BF8FC8 /* LaunchScreen.storyboard */,
 				2FCFDD972020701600BF8FC8 /* Info.plist */,
-				2FA9C3CF202A021F0094F587 /* pln.swift */,
 			);
 			path = "IOS-Project";
 			sourceTree = "<group>";
@@ -236,6 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FCFDD962020701600BF8FC8 /* LaunchScreen.storyboard in Resources */,
+				2FA9C3D5202A0C240094F587 /* focus_square.png in Resources */,
+				2FA9C3D3202A0C050094F587 /* grid.png in Resources */,
+				2FA9C3D7202A0C3A0094F587 /* add.png in Resources */,
 				2FCFDD932020701600BF8FC8 /* Assets.xcassets in Resources */,
 				2FCFDD912020701600BF8FC8 /* Main.storyboard in Resources */,
 			);
@@ -300,6 +312,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2FA9C3D1202A0C050094F587 /* grid.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FA9C3D2202A0C050094F587 /* Base */,
+			);
+			name = grid.png;
+			sourceTree = "<group>";
+		};
 		2FCFDD8F2020701600BF8FC8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
