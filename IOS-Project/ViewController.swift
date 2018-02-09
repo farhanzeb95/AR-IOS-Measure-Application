@@ -71,11 +71,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         return node
     }
-    //2nd Commit Ready to push
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setsess()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        srscene.session.pause()
+    }
+    func setsess()
+    {
+        let conf = ARWorldTrackingConfiguration()
+        conf.planeDetection = .horizontal
+        self.srscene.session.run(conf)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 
