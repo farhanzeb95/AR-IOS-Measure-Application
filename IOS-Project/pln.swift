@@ -28,13 +28,18 @@ class Plan: SCNNode {
         let plnNod = SCNNode(geometry: self.plngeo)
         plnNod.position = SCNVector3(0, -planeHeight/2.0 , 0)
         self.addChildNode(plnNod)
-        setTextureScale()
+        setTxtureScl()
     }
     func updateWith(_ anch: ARPlaneAnchor) {
+        self.plngeo?.width = CGFloat(anch.extent.x)
+        self.plngeo?.length = CGFloat(anch.extent.z)
+        self.position = SCNVector3(anch.center.x, 0, anch.center.z)
         
+        
+        setTxtureScl()
     }
     
-    func setTextureScale()
+    func setTxtureScl()
     {
         
     }
