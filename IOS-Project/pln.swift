@@ -14,10 +14,8 @@ class Plan: SCNNode {
     var plngeo: SCNBox?
     var anch: ARPlaneAnchor?
     init(anch: ARPlaneAnchor) {
-        
-		super.init()
-        
-		let wid = CGFloat(anch.extent.x)
+        super.init()
+        let wid = CGFloat(anch.extent.x)
         let len = CGFloat(anch.extent.z)
         let planeHeight = 0.01 as CGFloat
         self.plngeo = SCNBox(width: wid, height: planeHeight, length: len, chamferRadius: 0)
@@ -30,13 +28,10 @@ class Plan: SCNNode {
         let plnNod = SCNNode(geometry: self.plngeo)
         plnNod.position = SCNVector3(0, -planeHeight/2.0 , 0)
         self.addChildNode(plnNod)
-        
-		setTxtureScl()
+        setTxtureScl()
     }
-    
-	func updateWith(_ anch: ARPlaneAnchor) {
-        
-		self.plngeo?.width = CGFloat(anch.extent.x)
+    func updateWith(_ anch: ARPlaneAnchor) {
+        self.plngeo?.width = CGFloat(anch.extent.x)
         self.plngeo?.length = CGFloat(anch.extent.z)
         self.position = SCNVector3(anch.center.x, 0, anch.center.z)
         
@@ -46,12 +41,18 @@ class Plan: SCNNode {
     
     func setTxtureScl()
     {
+        let width = self.plngeo?.width
+        let length = self.plngeo?.length
         
+       
+        let mat = self.plngeo?.materials[4]
+        mat?.diffuse.contentsTransform = SCNMatrix4MakeScale(Float(width!), Float(length!), 1);
+        mat?.diffuse.wrapS = .repeat
+        mat?.diffuse.wrapT = .repeat
     }
     
     required init?(coder aDecoder: NSCoder) {
-        
-		fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented")
     }
 }
     
