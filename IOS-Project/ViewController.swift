@@ -109,9 +109,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.measurementlbl.text = desc
 
         }
+
 }
-    
-}
+
     func getDrawnLineFrom(pos1: SCNVector3,
                           toPos2: SCNVector3) -> SCNNode {
         
