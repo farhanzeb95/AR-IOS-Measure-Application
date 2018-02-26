@@ -89,7 +89,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.didReceiveMemoryWarning()
         
     }
+    var line_node: SCNNode?
+    func renderer(_ renderer: SCNSceneRenderer,
+                  updateAtTime time: TimeInterval) {
+        
+        DispatchQueue.main.async {
+            
+            guard let currentPosition = self.ExistPlanes(),
+                let start = self.stnode else {
+                    return
+            }
 
-
+        }
+}
 }
 
