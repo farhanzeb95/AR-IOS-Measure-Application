@@ -110,7 +110,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         }
 
-}
+        }
+    }
 
     func getDrawnLineFrom(pos1: SCNVector3,
                           toPos2: SCNVector3) -> SCNNode {
@@ -134,8 +135,67 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if pos1 == nil || pos2 == nil {
             return "0"
         }
+        let d = self.distanceBetweenPoints(A: pos1!, B: pos2!)
+        
+        var result = ""
+        
+        let meter = stringValue(v: Float(d), unit: "meters")
+        result.append(meter)
+        result.append("\n")
+        
+        let f = self.CM_fromMeter(m: Float(d))
+        let feet = stringValue(v: Float(f), unit: "feet")
+        result.append(feet)
+        result.append("\n")
+        
+        let inch = self.Inch_fromMeter(m: Float(d))
+        let inches = stringValue(v: Float(inch), unit: "inch")
+        result.append(inches)
+        result.append("\n")
+        
+        let cm = self.CM_fromMeter(m: Float(d))
+        let cms = stringValue(v: Float(cm), unit: "cm")
+        result.append(cms)
+        
+        return result
        
 }
+
+    func distanceBetweenPoints(A: SCNVector3, B: SCNVector3) -> CGFloat {
+        let l = sqrt(
+            (A.x - B.x) * (A.x - B.x)
+                +   (A.y - B.y) * (A.y - B.y)
+                +   (A.z - B.z) * (A.z - B.z)
+        )
+        return CGFloat(l)
+    }
+    
+    /**
+     String with float value and unit
+     */
+    func stringValue(v: Float, unit: String) -> String {
+        let s = String(format: "%.1f %@", v, unit)
+        return s
+    }
+    
+    /**
+     Inch from meter
+     */
+    func Inch_fromMeter(m: Float) -> Float {
+        let v = m * 39.3701
+        return v
+    }
+    
+    /**
+     centimeter from meter
+     */
+    func CM_fromMeter(m: Float) -> Float {
+        let v = m * 100.0
+        return v
+    }
+}
+    
+
 
 
 
